@@ -1,0 +1,23 @@
+{
+  "name": "todois_app",
+  "version": "1.0.0",
+  "description": "qa challenge",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "testAPI": "npx newman run './Todoist/backend/collection/Todoist.postman_collection.json' -e './Todoist/backend/envVariables/QA.postman_environment.json' -r htmlextra --reporter-htmlextra-export './Todoist/backend/reports/reports.html'",
+    "testFront": "testcafe chrome './Todoist/frontend/page_model/test/'",
+    "browserstack": "testcafe 'browserstack:chrome@90.0:Windows 10' './Todoist/frontend/page_model/test/'",
+    "start": "  ./BrowserStackLocal --key xNGqT2XdsAeDSZHpZDN9 --local-identifier TestCafe --daemon start --parallel-runs 5  "
+  },
+  "author": "Evelyne Franco",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0"
+  }
+}

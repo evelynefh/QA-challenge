@@ -18,3 +18,8 @@ jobs:
       with:
         node-version: '14.x'
     - run: npm ci
+      - name: use newman
+        uses: matt-ball/newman-action@master
+        with:
+          collection: Todoist/backend/collection/Todoist.postman_collection.json
+          environment: Todoist/backend/envVariables/QA.postman_environment.json

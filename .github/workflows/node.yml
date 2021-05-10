@@ -5,9 +5,9 @@ name: E2E test
 
 on:
   push:
-    branches: [ main ]
+    branches: [ challenge ]
   pull_request:
-    branches: [ main ]
+    branches: [ challenge ]
 env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
@@ -21,8 +21,8 @@ jobs:
       - name: use newman
         uses: matt-ball/newman-action@master
         with:
-          collection: Todoist.postman_collection.json
-          environment: QA.postman_environment.json
+          collection: Todoist/backend/collection/Todoist.postman_collection.json
+          environment: Todoist/backend/envVariables/QA.postman_environment.json
      
   windows10_test:
     name: Run Windows 10 TestCafe Tests

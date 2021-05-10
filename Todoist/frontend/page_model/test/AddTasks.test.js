@@ -20,8 +20,6 @@ test('Validate user is able to add 10 tasks', async t=>{
     await todayPage.add10Task()
     await t
     .expect(todayPage.contentTask.innerText).eql('10')
-
-
     //await t.maximizeWindow()
     await todayPage.deleteTask()
     await t.wait(9000)

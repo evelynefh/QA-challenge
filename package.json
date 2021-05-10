@@ -10,6 +10,9 @@
     "testAPI": "npx newman run './Todoist/backend/collection/Todoist.postman_collection.json' -e './Todoist/backend/envVariables/QA.postman_environment.json' -r htmlextra --reporter-htmlextra-export './Todoist/backend/reports/reports.html'",
     "testFront": "testcafe chrome './Todoist/frontend/page_model/test/'",
     "browserstack": "testcafe 'browserstack:chrome@90.0:Windows 10' './Todoist/frontend/page_model/test/'",
+    "testFront2": "testcafe \"chrome:headless\" ./Todoist/frontend/page_model/test/",
+
+
     "start": "  ./BrowserStackLocal --key xNGqT2XdsAeDSZHpZDN9 --local-identifier TestCafe --daemon start --parallel-runs 5  "
   },
   "author": "Evelyne Franco",

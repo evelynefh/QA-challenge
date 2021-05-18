@@ -4,6 +4,7 @@
 build/* 
 !build/index.js 
 dist/* 
-bundle.js 
+bundle.js
+.eslintrc.js 
 .*/* 
 .*

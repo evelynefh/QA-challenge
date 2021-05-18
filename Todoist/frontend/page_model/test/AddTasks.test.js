@@ -8,6 +8,7 @@ fixture('Task feature: add tasks')
       .useRole(VALID_USER)
   })
 
+// eslint-disable-next-line no-undef
 test('Validate user is able to add a task', async t => {
   await todayPage.addSimpleTask('test')
   await t.expect(todayPage.task.exists).ok()
@@ -15,6 +16,7 @@ test('Validate user is able to add a task', async t => {
     .wait(5000)
 })
 
+// eslint-disable-next-line no-undef
 test('Validate user is able to add 10 tasks', async t => {
   await todayPage.add10Task()
   await t

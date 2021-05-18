@@ -1,3 +1,5 @@
+"--ignore-pattern '!<relative/path/to/filename>'"
+// eslint-disable-next-line no-undef
 module.exports = {
     "env": {
         "browser": true,

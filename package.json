@@ -11,7 +11,8 @@
     "testFront": "testcafe chrome './Todoist/frontend/page_model/test/'",
     "browserstack": "testcafe 'browserstack:chrome@90.0:Windows 10' './Todoist/frontend/page_model/test/'",
     "testFront2": "testcafe \"chrome:headless\" ./Todoist/frontend/page_model/test/",
-    "start": "  ./BrowserStackLocal --key xNGqT2XdsAeDSZHpZDN9 --local-identifier TestCafe --daemon start --parallel-runs 5  "
+    "start": "  ./BrowserStackLocal --key xNGqT2XdsAeDSZHpZDN9 --local-identifier TestCafe --daemon start --parallel-runs 5  ",
+    "lint": "eslint ./Todoist --fix"
   },
   "author": "Evelyne Franco",
   "license": "ISC",

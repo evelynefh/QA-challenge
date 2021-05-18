@@ -1,4 +1,4 @@
-import { Role } from 'testcafe'
+import { Role} from 'testcafe'
 import loginPage from '../pages/loginPage'
 import homePage from '../pages/homePage'
 import { CREDENTIALS } from '../data/Constants'
@@ -8,6 +8,8 @@ export const url = 'https://todoist.com/'
 export const VALID_USER = Role(url, async t => {
   await homePage.submitLoginPage()
   await loginPage.login(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
+  await t
+        .wait(1)
   // await t.click(this.timeZone) // when the test is executed uin browserstack timezone alert is displayed, if running in local this line can be deleted or you can change time zone in todoist config page.
 }, {
   preserveUrl: true

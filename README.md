@@ -12,7 +12,7 @@
 * Create CI with Github actions 
 
 ## Instalation 
-    Preconditiom: in order to be able to execute this code, you need to have installed in your computer Node.js and npm. 
+Preconditiom: in order to be able to execute this code, you need to have installed in your computer Node.js and npm. 
     Clone the repo into your local machine: 
 
 ```
@@ -28,40 +28,40 @@ npm install
 
 ## Running the tests
 ### Frontend test 
-    Run test in local browser
+  Run test in local browser
 
 ```
 npm run testFront
 ```
-    BrowserStack 
-    To be able to execute test in browser stak you will need to have uasr and token from browserstack.
+  BrowserStack 
+  To be able to execute test in browser stak you will need to have uasr and token from browserstack.
      Set up BrowserStack 
 ```
 npm i -g testcafe-browser-provider-browserstack
 ```
 
-    Before using this plugin, set up the BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY environment variables. You can also set up these variables with the following commands:
+ Before using this plugin, set up the BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY environment variables. You can also set up these variables with the following commands:
 
 ```
 export BROWSERSTACK_USERNAME="browserstack user"
 
 export BROWSERSTACK_ACCESS_KEY="key value"
 ```
-    Starting BrowserStack
+ Starting BrowserStack
 ```
   ./BrowserStackLocal --key <key value> --local-identifier TestCafe --daemon start --parallel-runs <number-of-parallels>
 ```
-    Start the test
-```
-npm run browserstack
-```
+Start the test
+ ```
+ npm run browserstack
+ ```
 
-    ### Backend test 
-    Execute the following command to be ale to run backend test
-```
-npm run testAPI
-```
-    A html report should be created in /Todoist/backend/reports/ path 
+ ### Backend test 
+ Execute the following command to be ale to run backend test
+ ```
+ npm run testAPI
+ ```
+A html report should be created in /Todoist/backend/reports/ path 
 
 ## Running the tests
 

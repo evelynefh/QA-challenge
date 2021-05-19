@@ -13,20 +13,23 @@
 
 ## Instalation 
     Preconditiom: in order to be able to execute this code, you need to have installed in your computer Node.js and npm. 
-
     Clone the repo into your local machine: 
+
 ```
 git clone https://github.com/evelynefh/QA-challenge.git
 cd QA-challenge
 ```
 
 Install the project 
+
 ```
 npm install
 ```
+
 ## Running the tests
-    ### Frontend test 
+### Frontend test 
     Run test in local browser
+
 ```
 npm run testFront
 ```
@@ -36,11 +39,12 @@ npm run testFront
 ```
 npm i -g testcafe-browser-provider-browserstack
 ```
+
     Before using this plugin, set up the BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY environment variables. You can also set up these variables with the following commands:
+
 ```
 export BROWSERSTACK_USERNAME="browserstack user"
-```
-```
+
 export BROWSERSTACK_ACCESS_KEY="key value"
 ```
     Starting BrowserStack

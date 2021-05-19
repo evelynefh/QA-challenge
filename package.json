@@ -1,0 +1,33 @@
+{
+  "name": "todois_app",
+  "version": "1.0.0",
+  "description": "qa challenge",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "testAPI": "npx newman run './Todoist/backend/collection/Todoist.postman_collection.json' -e './Todoist/backend/envVariables/QA.postman_environment.json' -r htmlextra --reporter-htmlextra-export './Todoist/backend/reports/reports.html'",
+    "testFront": "testcafe chrome './Todoist/frontend/page_model/test/'",
+    "browserstack": "testcafe 'browserstack:chrome@90.0:Windows 10' './Todoist/frontend/page_model/test/'",
+    "testFront2": "testcafe \"chrome:headless\" ./Todoist/frontend/page_model/test/",
+    "start": "  ./BrowserStackLocal --key xNGqT2XdsAeDSZHpZDN9 --local-identifier TestCafe --daemon start --parallel-runs 5  ",
+    "lint": "eslint ./Todoist --fix"
+  },
+  "author": "Evelyne Franco",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^8.6.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "standard": "^16.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-plugin-yml": "^0.9.0"
+  }
+}
